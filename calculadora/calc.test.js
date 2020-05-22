@@ -1,50 +1,48 @@
 const calculadora = require("./calc");
 
-describe("calculadora", () => {
-  it("teste exemplo", () => {
+describe("Calculadora",() => {
+  it('teste exemplo', () =>{
     const numero1 = 23;
     const numero2 = 7;
-    expect(23 + 7).toBe(30);
-    expect(23 + 7).not.toBe(31);
+    expect(23+7).toBe(30);
+    expect(27+7).not.toBe(31);
   });
 
-  describe("soma", () => {
-    it("retorna 3 quando 2 somado com 1", () => {
+  describe("Soma", () => {
+    it("Retorna 3 quando 2 somado com 1", () =>{
       const num1 = 2;
       const num2 = 1;
-      expect(calculadora.soma(num1, num2)).toBe(3);
-    });
+      expect(calculadora.soma(num1,num2)).toBe(3)
+    })
   });
 
-  describe("subtracao", () => {
-    it("retorna 1 quando 1 subtraidoi de 2", () => {
+  describe("Subtração", () => {
+    it("Retorna 1 quando 1 subtraido de 2", () =>{
       const num1 = 2;
       const num2 = 1;
-      expect(calculadora.subtracao(num1, num2)).toBe(1);
-    });
+      expect(calculadora.subtracao(num1,num2)).toBe(1)
+    })
   });
 
-  describe("multiplicacao", () => {
-    it("retorna 6 quando 2 multplicado por 3", () => {
-      const num1 = 2;
-      const num2 = 3;
-      expect(calculadora.multiplicacao(num1, num2)).toBe(6);
-    });
+  describe("Multiplicaçao", () => {
+    it("Retorna 6 quando 3 multiplicado por 2", () =>{
+      const num1 = 3;
+      const num2 = 2;
+      expect(calculadora.multiplicacao(num1,num2)).toBe(6)
+    })
   });
 
-  describe("divisao", () => {
-    it("retorna 2 quando 6 divido por 3", () => {
-      const num1 = 6;
-      const num2 = 3;
-      expect(calculadora.divisao(num1, num2)).toBe(2);
+  describe("Divisão", () => {
+    it("Retorna 2 quando 4 dividido por 2", () =>{
+      const num1 = 4;
+      const num2 = 2;
+      expect(calculadora.divisao(num1,num2)).toBe(2)
     });
 
-    it("retorna Erro se divisão por 0", () => {
-      const num1 = 6;
+    it("Retorna 0 se dividido por zero", () =>{
+      const num1 = 4;
       const num2 = 0;
-      expect(calculadora.divisao(num1, num2)).toBe(
-        "Erro, não pode dividir por 0"
-      );
+      expect(calculadora.divisao(num1,num2)).toBe("Erro, não pode dividir por 0")
     });
   });
 });
