@@ -41,7 +41,7 @@ function mapCharacterToEpisodes(episodes, character) {
 
 function filterByEpisode(personagens,episode ){
   const episodios = personagens.reduce( (episodes, character) => {
-    return mapCharcterToEpisodes(episodes,character);
+    return mapCharacterToEpisodes(episodes,character);
   },{});
   return episodios[episode]
 }

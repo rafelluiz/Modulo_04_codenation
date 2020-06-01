@@ -52,6 +52,13 @@ describe("Filtro",() => {
       //expect(personagem.name).toBe("Abradolf Lincler");
       const response = filtro.mapCharacterToEpisodes(episodes,personagem);
       expect(response['10'].length).toBe(2);
-    })
+      expect(response['10'][1].name).toBe(personagem.name);
+    });
+
+    it("Retorna somente Morty", () => {
+      const response = filtro.filterByEpisode(data.results,'1');
+      expect(response.length).toBe(2);
+      expect(response[1].name).toBe("Morty Smith");
+    });
   });
 });
